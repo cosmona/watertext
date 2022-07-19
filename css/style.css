@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+
+}
+.content{
+    position: relative;
+}
+.content h2{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    font-size: 8em;
+}
+.content h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+}
+.content h2:nth-child(2){
+    color: #03a9f4;
+    animation: animate 4s infinite;
+}
+@keyframes animate {
+    /*https://bennettfeely.com/clippy/ */
+    0%,100%{
+        clip-path: polygon(0% 41%, 9% 42%, 26% 49%, 37% 57%, 50% 63%, 61% 64%, 73% 63%, 84% 60%, 94% 55%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0 67%, 12% 70%, 26% 74%, 40% 71%, 50% 63%, 61% 53%, 76% 47%, 88% 42%, 94% 41%, 100% 40%, 100% 100%, 0% 100%);
+    }
+}
